@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "aside section section section section"
+    "aside section section section section"
+    "footer footer footer footer footer";
+  background-color: #e5dde6;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffe5f0;
+}
+
+nav figure img {
+  width: 100%;
+  max-width: 100px;
+}
+
+nav h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+aside {
+  grid-area: aside;
+  padding: 0 10px 10px;
+}
+
+aside h3 {
+  margin: 30px 0;
+  text-align: center;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  width: 100%;
+}
+
+aside li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+aside ul li:hover {
+  transform: scale(1.02);
+  box-shadow: inset 0px 0px 30px #9da8d9;
+}
+
+aside ul li p {
+  margin: 0;
+}
+
+section {
+  grid-area: section;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+section .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid aliceblue;
+  background-color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+
+section .card:hover {
+  transform: scale(1.02);
+}
+
+section .card figure {
+  height: auto;
+  max-height: 380px;
+  overflow-y: hidden;
+}
+
+section .card figure img {
+  width: 100%;
+}
+
+section .card h3,
+section .card p {
+  margin: 0;
+}
+
+section .card button {
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 15px 30px;
+  background-color: #9da8d9;
+}
+
+section .card button:hover {
+  background-color: #abbbdd;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #e5dde6;
+  width: 100%;
+  padding: 40px 0;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
